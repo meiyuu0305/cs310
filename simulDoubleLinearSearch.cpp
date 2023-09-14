@@ -40,14 +40,16 @@ int main()
     // generating 1000 random values and storing them to the vector
     for(int k=0;k<VECTOR_SIZE;k++)
     {
-      int value = get_rand_in_range(1, VECTOR_SIZE);
+      // random value in range 0 to 15000
+      int value = get_rand_in_range(0, 15000);
       test_values.push_back(value); 
     }
     
     sort(test_values.begin(), test_values.end());
     
     // generating a random value to search in the vector
-    int searchValue = get_rand_in_range(1, VECTOR_SIZE);
+   // random value in range 0 to 15000
+    int searchValue = get_rand_in_range(0, 15000);
     int comp = 0;
     // calling the function to search for the searchValue
     vector<int> results = linear_search(test_values, searchValue, comp); 
